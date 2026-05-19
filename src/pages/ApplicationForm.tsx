@@ -92,9 +92,6 @@ export default function ApplicationForm() {
           <p className={styles.contextNote}>
             Once submitted, we will review your application and follow up with next steps.
           </p>
-          <p className={styles.contextPS}>
-            <em>PS, we see PeaceTech as a technology that can reduce, mitigate, or prevent violent conflict.</em>
-          </p>
         </section>
 
         {/* Form Zone */}
@@ -144,7 +141,7 @@ export default function ApplicationForm() {
                 value={data.companyName}
                 onChange={(v) => setField('companyName', v)}
                 onBlur={() => touchField('companyName')}
-                placeholder="Acme Defense Corp"
+                placeholder="Acme PeaceTech Corp"
                 autoComplete="organization"
                 hasError={!!errors.companyName}
               />
@@ -234,6 +231,11 @@ export default function ApplicationForm() {
               <p className={styles.actionHint}>Complete all fields above to submit</p>
             )}
           </div>
+
+          {/* PS Note at the very end of the form */}
+          <p className={styles.contextPS}>
+            <em>PS, we see PeaceTech as a technology that can reduce, mitigate, or prevent violent conflict.</em>
+          </p>
         </form>
       </main>
 
