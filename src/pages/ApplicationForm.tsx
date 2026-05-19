@@ -8,6 +8,7 @@ import Textarea from '@/components/form/Textarea';
 import RadioGroup from '@/components/form/RadioGroup';
 import FileUpload from '@/components/form/FileUpload';
 import SubmitButton from '@/components/form/SubmitButton';
+import SocialProof from '@/components/layout/SocialProof';
 import { useFormState } from '@/hooks/useFormState';
 import { isFormValid } from '@/lib/validation';
 import styles from './ApplicationForm.module.css';
@@ -70,6 +71,9 @@ export default function ApplicationForm() {
             Applications close September 1st
           </div>
         </section>
+
+        {/* Social Proof Zone */}
+        <SocialProof />
 
         {/* Context Zone */}
         <section className={styles.context}>
@@ -176,7 +180,7 @@ export default function ApplicationForm() {
             </FormField>
 
             <FormField
-              label={`After the 12 week PeaceTech accelerator finishes, what would make you say \"joining this changed everything for me\"?`}
+              label={`After the 12 week PeaceTech accelerator finishes, what would make you say "joining this changed everything for me"?`}
               htmlFor="acceleratorImpact"
               required
               error={errors.acceleratorImpact}
