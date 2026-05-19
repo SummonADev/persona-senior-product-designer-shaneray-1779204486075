@@ -1,0 +1,99 @@
+.zone {
+  border: 1.5px dashed var(--color-border);
+  border-radius: var(--radius-md);
+  background: #fff;
+  padding: var(--space-8) var(--space-6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: border-color var(--transition), background var(--transition);
+  min-height: 96px;
+}
+
+.zone:hover {
+  border-color: var(--color-mint);
+  background: var(--color-mint-light);
+}
+
+.dragging {
+  border-color: var(--color-mint);
+  background: var(--color-mint-light);
+}
+
+.hasFile {
+  cursor: default;
+  border-style: solid;
+  border-color: var(--color-mint);
+  background: var(--color-mint-light);
+}
+
+.error {
+  border-color: var(--color-red);
+  border-style: dashed;
+}
+
+.hiddenInput {
+  display: none;
+}
+
+.placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  text-align: center;
+}
+
+.icon {
+  color: var(--color-muted);
+  opacity: 0.6;
+}
+
+.cta {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-black);
+}
+
+.meta {
+  font-size: 12px;
+  color: var(--color-muted);
+}
+
+.fileInfo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.fileName {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-black);
+  word-break: break-all;
+}
+
+.fileSize {
+  font-size: 12px;
+  color: var(--color-muted);
+}
+
+.removeBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.08);
+  color: var(--color-black);
+  transition: background var(--transition);
+  margin-left: auto;
+}
+
+.removeBtn:hover {
+  background: rgba(250, 58, 0, 0.12);
+  color: var(--color-red);
+}

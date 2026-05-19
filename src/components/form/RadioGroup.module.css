@@ -1,0 +1,45 @@
+.group {
+  display: flex;
+  flex-direction: row;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-5);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  background: #fff;
+  transition: border-color var(--transition), background var(--transition);
+  user-select: none;
+}
+
+.option:hover {
+  border-color: var(--color-mint);
+}
+
+.optionSelected {
+  border-color: var(--color-mint);
+  background: var(--color-mint-light);
+}
+
+.groupError .option {
+  border-color: var(--color-red);
+}
+
+.radio {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--color-mint);
+  cursor: pointer;
+}
+
+.optionLabel {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-black);
+}
