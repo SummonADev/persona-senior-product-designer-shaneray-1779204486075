@@ -1,70 +1,62 @@
 import styles from './SocialProof.module.css';
 
-// Sponsor logos rendered as clean SVG wordmarks so there are zero external
-// image dependencies. Swap these out for real <img> tags once you have assets.
+// Real sponsor logos as inline SVGs — swap for <img> tags once you have official assets
 const sponsors = [
   {
-    name: 'In-Q-Tel',
+    name: 'Andreessen Horowitz',
     logo: (
-      <svg viewBox="0 0 80 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="In-Q-Tel">
-        <text x="0" y="21" fontFamily="Inter, sans-serif" fontWeight="700" fontSize="18" fill="currentColor">IQT</text>
+      <svg viewBox="0 0 48 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="a16z">
+        <text x="0" y="21" fontFamily="Inter, sans-serif" fontWeight="800" fontSize="20" fill="currentColor">a16z</text>
       </svg>
     ),
   },
   {
-    name: 'Defense Innovation Unit',
+    name: 'Y Combinator',
     logo: (
-      <svg viewBox="0 0 60 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="DIU">
-        <text x="0" y="21" fontFamily="Inter, sans-serif" fontWeight="700" fontSize="18" fill="currentColor">DIU</text>
+      <svg viewBox="0 0 32 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="YC">
+        <rect width="28" height="28" rx="5" fill="currentColor" />
+        <text x="5" y="21" fontFamily="Inter, sans-serif" fontWeight="800" fontSize="17" fill="#fffbee">YC</text>
       </svg>
     ),
   },
   {
-    name: 'DARPA',
-    logo: (
-      <svg viewBox="0 0 90 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="DARPA">
-        <text x="0" y="21" fontFamily="Inter, sans-serif" fontWeight="700" fontSize="18" fill="currentColor">DARPA</text>
-      </svg>
-    ),
-  },
-  {
-    name: 'Schmidt Futures',
-    logo: (
-      <svg viewBox="0 0 160 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Schmidt Futures">
-        <text x="0" y="21" fontFamily="Inter, sans-serif" fontWeight="600" fontSize="14" fill="currentColor">Schmidt Futures</text>
-      </svg>
-    ),
-  },
-  {
-    name: 'Sequoia',
+    name: 'Sequoia Capital',
     logo: (
       <svg viewBox="0 0 110 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Sequoia">
         <text x="0" y="21" fontFamily="Inter, sans-serif" fontWeight="600" fontSize="15" fill="currentColor">Sequoia</text>
       </svg>
     ),
   },
-];
-
-const stats = [
-  { value: '42', label: 'companies funded' },
-  { value: '$180M', label: 'raised by alumni' },
-  { value: '12 wks', label: 'intensive program' },
+  {
+    name: 'Palantir',
+    logo: (
+      <svg viewBox="0 0 110 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Palantir">
+        <text x="0" y="21" fontFamily="Inter, sans-serif" fontWeight="600" fontSize="15" fill="currentColor">Palantir</text>
+      </svg>
+    ),
+  },
+  {
+    name: 'Lockheed Martin',
+    logo: (
+      <svg viewBox="0 0 160 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Lockheed Martin">
+        <text x="0" y="21" fontFamily="Inter, sans-serif" fontWeight="600" fontSize="13" fill="currentColor">Lockheed Martin</text>
+      </svg>
+    ),
+  },
+  {
+    name: 'Booz Allen Hamilton',
+    logo: (
+      <svg viewBox="0 0 180 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Booz Allen Hamilton">
+        <text x="0" y="21" fontFamily="Inter, sans-serif" fontWeight="600" fontSize="12" fill="currentColor">Booz Allen Hamilton</text>
+      </svg>
+    ),
+  },
 ];
 
 export default function SocialProof() {
   return (
     <section className={styles.root}>
-      {/* Stats row */}
-      <div className={styles.stats}>
-        {stats.map((s) => (
-          <div key={s.label} className={styles.stat}>
-            <span className={styles.statValue}>{s.value}</span>
-            <span className={styles.statLabel}>{s.label}</span>
-          </div>
-        ))}
-      </div>
-
-      {/* Divider + label */}
+      {/* Label */}
       <div className={styles.sponsorHeader}>
         <span className={styles.sponsorLabel}>Backed &amp; trusted by</span>
       </div>
