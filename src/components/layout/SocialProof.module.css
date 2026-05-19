@@ -4,7 +4,7 @@
   margin-bottom: var(--space-10);
   display: flex;
   flex-direction: column;
-  gap: var(--space-5);
+  gap: var(--space-6);
 }
 
 /* Sponsor label */
@@ -35,30 +35,42 @@
 .logos {
   display: flex;
   align-items: center;
-  gap: var(--space-8);
+  justify-content: center;
+  gap: var(--space-10);
   flex-wrap: wrap;
 }
 
 .logoItem {
-  color: var(--color-muted);
-  opacity: 0.55;
-  transition: opacity var(--transition);
   display: flex;
   align-items: center;
+  justify-content: center;
+  opacity: 0.45;
+  transition: opacity var(--transition);
+  flex-shrink: 0;
 }
 
 .logoItem:hover {
-  opacity: 1;
+  opacity: 0.85;
 }
 
-.logoItem svg {
-  height: 22px;
+.logoImage {
+  height: 28px;
   width: auto;
+  max-width: 140px;
   display: block;
+  object-fit: contain;
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   .logos {
-    gap: var(--space-6);
+    gap: var(--space-8);
+    justify-content: center;
+  }
+
+  .logoImage {
+    height: 22px;
+    max-width: 110px;
   }
 }
